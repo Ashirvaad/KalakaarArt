@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Kalakaar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to bottom, #1c1c1c, #2c2c2c);
+      color: white;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: #ff6600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    
+    }
+    .gallery-heading {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+    .gallery-img-wrapper {
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    .social-icons {
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #0dcaf0;
+    }
+
+    .footer {
+      background-color: #212529;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    nav h1 img {
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+    <nav>
+    <h1><img src="images/logo.jpeg" height="40px" width="40px">Kalakaar</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html"style="color: #ff6600;">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Gallery Heading -->
+  <div class="container gallery-heading" data-aos="fade-up">
+    <h2 class="fw-bold display-5">Art Gallery</h2>
+    <p class="text-muted">Browse through a curated collection of soulful artworks</p>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="container pb-5">
+    <div class="row g-4">
+      <!-- Image 1 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <a href="images/devika.jpg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/devika.jpg" alt="Devika" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+        <a href="images/pihu.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/pihu.jpeg" alt="Pihu" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+        <a href="images/sara.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/sara.jpeg" alt="Sara" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <a href="images/ganapati.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/ganapati.jpeg" alt="Ganapati" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <a href="images/krishna.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/krishna.jpeg" alt="Krishna" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 6 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+        <a href="images/radha.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/radha.jpeg" alt="Radha" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 7 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+        <a href="images/ram.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/ram.jpeg" alt="Ram" class="gallery-img">
+          </div>
+        </a>
+      </div>
+
+      <!-- Image 8 -->
+      <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <a href="images/sita.jpeg" class="glightbox" data-gallery="kalakaar">
+          <div class="gallery-img-wrapper">
+            <img src="images/sita.jpeg" alt="Sita" class="gallery-img">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Kalakaar. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://instagram.com/ashirvaad_532" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/KalakaarArt" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/919029159169" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:kalakaar532@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    AOS.init();
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+</body>
+</html>

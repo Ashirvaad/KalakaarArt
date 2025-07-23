@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Kalakaar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: url('images/bg.png') no-repeat center center/cover;
+      color: #fff;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 0.3em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      height: 60px;
+    }
+
+    nav h1 {
+      font-size: 1.3em;
+      color: #ff6600;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    nav h1 img {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2em;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    }
+
+    .about-section {
+      padding: 80px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 2px;
+    }
+
+    .about-section img {
+      width: 100%;
+      max-width: 200px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      margin: 50px auto;
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 75%, transparent 100%);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 5) 75%, transparent 100%);
+    }
+
+    .about-section h2 {
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 0 auto 20px;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+
+    .social-icons {
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #0dcaf0;
+    }
+
+    .footer {
+      background-color: #212529;
+      color: white;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1><img src="images/logo.jpeg" alt="Logo">Kalakaar</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" style="color: #ff6600;">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="mb-4" data-aos="fade-up">About Kalakaar</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Kalakaar is a celebration of expression through art. From pencil sketches that speak in monochrome to vibrant portraits blooming with color, every creation reflects a story, a soul, and a spark of inspiration.
+      </p>
+
+      <img src="images/artist.jpeg" alt="Artist Photo" data-aos="zoom-in" data-aos-delay="200"/>
+
+      <h2 data-aos="fade-right" data-aos-delay="300">Meet the Artist</h2>
+      <p data-aos="fade-up" data-aos-delay="400">
+        Welcome to Kalakaar, where every stroke tells a story and every color evokes a feeling. I'm a passionate artist
+        who finds inspiration in everyday life, emotions, and the vibrant world around us. With years of self-taught
+        exploration and soulful creation, I specialize in pencil sketches, watercolor portraits, and colored pencil
+        artworks that capture the essence of life and expression.
+      </p>
+
+      <p class="quote" data-aos="fade-left" data-aos-delay="500">
+        “Art speaks where words are unable to explain.”
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Kalakaar. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://instagram.com/ashirvaad_532" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/KalakaarArt" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/919029159169" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:kalakaar532@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
