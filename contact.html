@@ -1,236 +1,23 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Kalakaar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
-  <!-- 🔥 AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: url('images/bg.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-
-    /* Navbar */
-    nav {
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 1em 2em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav h1 {
-      font-size: 1.5em;
-      margin: 0;
-      color: #ff6600;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5em;
-      margin: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ff6600;
-    }
-
-    /* Hero Section */
-    .hero-section {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0));
-    text-align: center;
-    padding: 5em 1em 2em;
-    }
-
-    .hero-section h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-
-    .hero-section p {
-      font-size: 1.2em;
-      color: #ffffff;
-    }
-
-    /* Contact Form */
-    .contact-container {
-      display: flex;
-      flex-wrap: wrap;
-      background: rgba(0, 0, 0, 0.85);
-      margin: 2em auto;
-      max-width: 1000px;
-      padding: 2em;
-      border-radius: 20px;
-    }
-
-    .form-section, .info-section {
-      flex: 1;
-      padding: 1em;
-    }
-
-    .form-section label {
-      display: block;
-      margin-bottom: 0.3em;
-      font-weight: 600;
-    }
-
-    .form-section input,
-    .form-section textarea {
-      width: 100%;
-      padding: 0.7em;
-      margin-bottom: 1em;
-      border: none;
-      border-radius: 8px;
-      background: #eee;
-      color: #333;
-      font-size: 1em;
-    }
-
-    .form-section textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    .form-section button {
-      background: #ff6600;
-      color: white;
-      padding: 0.7em 1.5em;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .form-section button:hover {
-      background: #e65100;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 0 1em;
-    }
-
-    .divider::before,
-    .divider::after {
-      content: "";
-      flex: 1;
-      width: 2px;
-      background: #555;
-      margin: 10px 0;
-    }
-
-    .divider span {
-      font-size: 0.8em;
-      color: #aaa;
-      padding: 0.3em;
-    }
-
-    .info-section h3 {
-      margin-bottom: 1em;
-      font-size: 1.4em;
-      border-bottom: 2px solid #ff6600;
-      display: inline-block;
-      padding-bottom: 0.3em;
-    }
-
-    .info-section p {
-      margin-bottom: 0.8em;
-      font-size: 1em;
-    }
-
-    .info-section a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      padding: 2em 1em;
-      color: #aaa;
-      margin-top: 2em;
-    }
-
-    .social-icons {
-      margin-top: 2rem;
-    }
-
-    .social-icons a {
-      color: #fff;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #0dcaf0;
-    }
-
-    .footer {
-      background-color: #212529;
-      color: white;
-      padding: 1rem 0;
-    }
-
-    /* Responsive */
-    @media screen and (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-      }
-
-      .divider {
-        flex-direction: row;
-        margin: 1em 0;
-      }
-
-      .divider::before,
-      .divider::after {
-        height: 1px;
-        width: 30%;
-      }
-
-      .divider span {
-        padding: 0 1em;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0.5em;
-      }
-    }
-  </style>
-
+  <title>Kalakaar | Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="contact-page">
 
   <!-- Navbar -->
   <nav>
-    <h1>Kalakaar</h1>
+    <a href="index.html"><h1><img src="images/logo.jpeg" height="40px" width="40px">Kalakaar</h1></a>
+    <button class="navbar-toggler" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </button>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -239,48 +26,40 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero-section">
-    <h1 data-aos="fade-up">Contact</h1> <!-- 🔥 Animation added -->
-    <p data-aos="fade-up" data-aos-delay="150">Reach out to place an order, ask a question, or just say hello.</p> <!-- 🔥 -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold" data-aos="fade-down" data-aos-duration="1200">Contact Us</h1>
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+        Reach out for commissions, collaborations, or inquiries.
+      </p>
+    </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <div class="contact-container">
-
-    <!-- Left: Form -->
-    <div class="form-section" data-aos="fade-up" data-aos-delay="200"> <!-- 🔥 -->
-      <form action="https://formspree.io/f/mvgqkbkq" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="_replyto" required />
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6" data-aos="fade-up">
+          <form action="https://formspree.io/f/mvgqkbkq" method="POST" class="p-4 shadow rounded">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <!-- Divider -->
-    <div class="divider" data-aos="zoom-in" data-aos-delay="300"> <!-- 🔥 -->
-      <span>or</span>
-    </div>
-
-    <!-- Right: Info -->
-    <div class="info-section" data-aos="fade-up" data-aos-delay="400"> <!-- 🔥 -->
-      <h3>Contact Directly</h3>
-      <p><strong>Email:</strong> <a href="mailto:kalakaar532@gmail.com">kalakaar532@gmail.com</a></p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/ashirvaad_532" target="_blank">@ashirvaad_532</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/919029159169" target="_blank">+91 9029 159 169</a></p>
-    </div>
-
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer text-center">
@@ -290,16 +69,24 @@
         <a href="https://instagram.com/ashirvaad_532" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://facebook.com/KalakaarArt" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://wa.me/919029159169" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:kalakaar532@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:kalakaar532@gmail.com" ><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- 🔥 AOS JS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
-  </script>
 
+    // Clear form fields after successful Formspree submission
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function() {
+        setTimeout(() => {
+          form.reset();
+        }, 500); 
+      });
+    });
+  </script>
 </body>
 </html>
