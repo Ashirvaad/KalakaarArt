@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body class="contact-page">
 
-  <!-- Navbar -->
   <nav>
     <a href="index.html"><h1><img src="images/logo.jpeg" height="40px" width="40px">Kalakaar</h1></a>
     <button class="navbar-toggler" onclick="document.querySelector('nav ul').classList.toggle('show')">
@@ -21,12 +20,12 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="commissions.html">Commissions</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html" style="color: #ff6600;">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <h1 class="display-4 fw-bold" data-aos="fade-down" data-aos-duration="1200">Contact Us</h1>
@@ -36,12 +35,17 @@
     </div>
   </section>
 
-  <!-- Contact Form -->
   <section class="contact-section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6" data-aos="fade-up">
-          <form action="https://formspree.io/f/mvgqkbkq" method="POST" class="p-4 shadow rounded">
+          
+          <div id="successMessage" class="alert alert-success text-center d-none" role="alert">
+            <h4 class="alert-heading">Message Sent!</h4>
+            <p>Thank you for reaching out. We will get back to you within 48 hours.</p>
+          </div>
+
+          <form id="contactForm" action="https://formspree.io/f/mvgqkbkq" method="POST" class="p-4 shadow rounded">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" id="name" name="name" class="form-control" required>
@@ -61,13 +65,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
       <p class="mb-1">&copy; 2025 Kalakaar. All Rights Reserved.</p>
       <div class="social-icons">
         <a href="https://instagram.com/ashirvaad_532" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/179m7onqux" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://facebook.com/KalakaarArt" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://wa.me/919029159169" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="mailto:kalakaar532@gmail.com" ><i class="fas fa-envelope"></i></a>
       </div>
@@ -80,14 +83,37 @@
 
     // Clear form fields after successful Formspree submission
     document.addEventListener("DOMContentLoaded", function() {
-      const form = document.querySelector("form");
-      form.addEventListener("submit", function() {
-        setTimeout(() => {
-          form.reset();
-        }, 500); 
+      const form = document.getElementById("contactForm");
+      const successMessage = document.getElementById("successMessage");
+
+      form.addEventListener("submit", function(event) {
+        // Prevent default form submission to handle it via Fetch API
+        event.preventDefault(); 
+        
+        // Use Fetch API to submit form data asynchronously
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                form.classList.add('d-none'); // Hide the form
+                successMessage.classList.remove('d-none'); // Show success message
+                form.reset(); // Clear fields
+            } else {
+                // Fallback for an error response
+                alert('There was an issue sending your message. Please try again.');
+            }
+        })
+        .catch(error => {
+            // Fallback for network error
+            alert('A network error occurred. Please check your connection.');
+        });
       });
     });
   </script>
 </body>
 </html>
-
