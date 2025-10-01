@@ -10,11 +10,10 @@ html, body {
 }
 
 body {
-  /* FIX 1: Corrected path for local file viewing */
-  background: url("../../images/bg.png") no-repeat center center fixed; 
+  /* CORRECTED PATH for GitHub Pages deployment */
+  background: url("../images/bg.png") no-repeat center center fixed; 
   background-size: cover;
   background-attachment: fixed;
-  z-index: 1;
 }
 
 /* FIX 3: Removed overly broad 'img { border-radius: 50%; }' rule */
@@ -138,8 +137,8 @@ nav ul li a:hover {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    /* FIX 1: Corrected path for local file viewing */
-    url("../../images/bg.png") no-repeat center center; 
+    /* CORRECTED PATH for GitHub Pages deployment */
+    url("../images/bg.png") no-repeat center center; 
   background-size: cover;
   background-attachment: fixed;
   
@@ -408,8 +407,3 @@ form.shadow {
   .hero p { font-size: 1rem; }
   .featured-section h2 { font-size: 1.5rem; }
 }
-
-
-
-
-
