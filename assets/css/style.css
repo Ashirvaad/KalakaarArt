@@ -10,8 +10,8 @@ html, body {
 }
 
 body {
-  /* CORRECT PATH: Go up one directory (to the root) and then into the images folder */
-  background: url("KalakaarArt/images/bg.png") no-repeat center center fixed; 
+  /* FINAL, ABSOLUTE PATH FIX for GitHub Pages Project Site */
+  background: url("/KalakaarArt/images/bg.png") no-repeat center center fixed; 
   background-size: cover;
   background-attachment: fixed;
 }
@@ -137,8 +137,8 @@ nav ul li a:hover {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    /* CORRECT PATH: Go up one directory (to the root) and then into the images folder */
-    url("../images/bg.png") no-repeat center center; 
+    /* FINAL, ABSOLUTE PATH FIX for GitHub Pages Project Site */
+    url("/KalakaarArt/images/bg.png") no-repeat center center; 
   background-size: cover;
   background-attachment: fixed;
   
@@ -338,7 +338,7 @@ nav ul li a:hover {
 }
 
 .social-icons {
-  margin-top: 1rem; /* FIX 5: Reduced vertical spacing */
+  margin-top: 1rem; /* Corrected vertical spacing */
 }
 
 .social-icons a {
@@ -407,5 +407,3 @@ form.shadow {
   .hero p { font-size: 1rem; }
   .featured-section h2 { font-size: 1.5rem; }
 }
-
-
