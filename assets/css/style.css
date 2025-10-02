@@ -11,7 +11,7 @@ html, body {
 
 body {
   /* CORRECTED PATH for GitHub Pages deployment */
-  background: url("../../images/bg.png") no-repeat center center fixed; 
+  background: url("../images/bg.png") no-repeat center center fixed; 
   background-size: cover;
   background-attachment: fixed;
 }
@@ -138,7 +138,7 @@ nav ul li a:hover {
       rgba(0, 0, 0, 0.3)
     ),
     /* CORRECTED PATH for GitHub Pages deployment */
-    url("../../images/bg.png") no-repeat center center; 
+    url("../images/bg.png") no-repeat center center; 
   background-size: cover;
   background-attachment: fixed;
   
@@ -407,5 +407,3 @@ form.shadow {
   .hero p { font-size: 1rem; }
   .featured-section h2 { font-size: 1.5rem; }
 }
-
-
