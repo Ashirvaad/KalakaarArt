@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  /* CORRECTED PATH for GitHub Pages deployment */
+  /* CORRECT PATH: Go up one directory (to the root) and then into the images folder */
   background: url("../images/bg.png") no-repeat center center fixed; 
   background-size: cover;
   background-attachment: fixed;
@@ -137,7 +137,7 @@ nav ul li a:hover {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    /* CORRECTED PATH for GitHub Pages deployment */
+    /* CORRECT PATH: Go up one directory (to the root) and then into the images folder */
     url("../images/bg.png") no-repeat center center; 
   background-size: cover;
   background-attachment: fixed;
