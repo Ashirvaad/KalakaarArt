@@ -39,28 +39,28 @@
     <div class="container">
       <div class="row g-3">
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-          <img src="images/devika.jpg" class="img-fluid gallery-img" alt="Artwork 1">
+          <img src="images/devika.jpg" class="img-fluid gallery-img" alt="Artwork 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/devika.jpg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-          <img src="images/pihu.jpeg" class="img-fluid gallery-img" alt="Artwork 2">
+          <img src="images/pihu.jpeg" class="img-fluid gallery-img" alt="Artwork 2" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/pihu.jpeg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
-          <img src="images/sara.jpeg" class="img-fluid gallery-img" alt="Artwork 3">
+          <img src="images/sara.jpeg" class="img-fluid gallery-img" alt="Artwork 3" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/sara.jpeg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
-          <img src="images/radha.jpeg" class="img-fluid gallery-img" alt="Artwork 4">
+          <img src="images/radha.jpeg" class="img-fluid gallery-img" alt="Artwork 4" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/radha.jpeg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
-          <img src="images/sita.jpeg" class="img-fluid gallery-img" alt="Artwork 5">
+          <img src="images/sita.jpeg" class="img-fluid gallery-img" alt="Artwork 5" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/sita.jpeg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
-          <img src="images/ram.jpeg" class="img-fluid gallery-img" alt="Artwork 6">
+          <img src="images/ram.jpeg" class="img-fluid gallery-img" alt="Artwork 6" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/ram.jpeg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
-          <img src="images/krishna.jpeg" class="img-fluid gallery-img" alt="Artwork 7">
+          <img src="images/krishna.jpeg" class="img-fluid gallery-img" alt="Artwork 7" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/krishna.jpeg">
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="700">
-          <img src="images/devika.jpg" class="img-fluid gallery-img" alt="Artwork 8">
+          <img src="images/devika.jpg" class="img-fluid gallery-img" alt="Artwork 8" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/devika.jpg">
         </div>
       </div>
     </div>
@@ -78,10 +78,39 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 p-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="" id="modalImage" class="img-fluid" alt="Full-screen artwork view">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
+
+    // JavaScript to handle loading the correct image into the modal
+    document.addEventListener('DOMContentLoaded', function() {
+      const imageModal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      imageModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        const button = event.relatedTarget;
+        // Extract info from data-* attributes
+        const imageSrc = button.getAttribute('data-image-src');
+        
+        // Update the modal's content
+        modalImage.src = imageSrc;
+      });
+    });
   </script>
 </body>
 </html>
-
